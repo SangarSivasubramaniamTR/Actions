@@ -13,17 +13,11 @@ inputs:
 
 
 
-
 runs:
-    using: "composite"
-    steps:
-      - name: Remote Action
-        shell: bash
-        path: ./source-repo/
-
-      - name: Demo Step
-        working-directory: ./source-repo/
-        run: echo "Hello, ${{ inputs.name }}!"
-        shell: bash
+  using: "composite"
+  steps:        
+    - name: Remote Action      
+      shell: bash
+      run: echo "Hello, ${{ inputs.name }}!"
 
 
